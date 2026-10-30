@@ -1,0 +1,65 @@
+PASO 1. Registrar L01, L02 y L03
+   Libro L01 «El principito» registrado.
+   Libro L02 «Don Quijote de la Mancha» registrado.
+   Libro L03 «Alicia en el país de las maravillas» registrado.
+   [CUMPLE] Hay 3 libros en el catálogo
+
+PASO 2. Intentar registrar otro libro con código L01
+   Ya existe un libro con el código L01.
+   [CUMPLE] Se rechaza el código repetido
+
+PASO 3. Registrar solicitudes de Ana, Luis y Marta, en ese orden
+   Solicitud #1 de Ana para L01 registrada.
+   Solicitud #2 de Luis para L02 registrada.
+   Solicitud #3 de Marta para L03 registrada.
+   Catálogo: L01:Disponible, L02:Disponible, L03:Disponible
+   Cola (frente primero): #1 Ana->L01, #2 Luis->L02, #3 Marta->L03
+   Pila (cima primero): (vacía)
+   [CUMPLE] La cola tiene Ana, Luis, Marta
+
+PASO 4. Atender a Ana y después a Luis
+   Préstamo realizado: «El principito» (L01) para Ana.
+   Préstamo realizado: «Don Quijote de la Mancha» (L02) para Luis.
+   [CUMPLE] Ana sale antes que Luis
+
+PASO 5. Verificar que ambos préstamos estén en la pila
+   Catálogo: L01:Prestado, L02:Prestado, L03:Disponible
+   Cola (frente primero): #3 Marta->L03
+   Pila (cima primero): Luis->L02, Ana->L01
+   [CUMPLE] La pila contiene Luis (cima) y Ana
+
+PASO 6. Deshacer el préstamo de Luis
+   Préstamo deshecho: Luis - L02. El libro vuelve a estar disponible.
+   [CUMPLE] Se deshizo el préstamo de Luis
+
+PASO 7. Comprobar que L02 vuelve a estar disponible y Marta sigue pendiente
+   Catálogo: L01:Prestado, L02:Disponible, L03:Disponible
+   Cola (frente primero): #3 Marta->L03
+   Pila (cima primero): Ana->L01
+   [CUMPLE] L02 está disponible
+   [CUMPLE] Marta sigue pendiente
+
+PASO 8. Mostrar el catálogo ordenado por título (burbuja)
+   L03  Alicia en el país de las maravillas  (Disponible)
+   L02  Don Quijote de la Mancha  (Disponible)
+   L01  El principito  (Prestado)
+   [CUMPLE] Orden: Alicia, Don Quijote, El principito
+
+PASO 9. Demostrar que el ordenamiento no altera la cola ni el catálogo
+   Catálogo: L01:Prestado, L02:Disponible, L03:Disponible
+   Cola (frente primero): #3 Marta->L03
+   Pila (cima primero): Ana->L01
+   [CUMPLE] La cola no cambió
+   [CUMPLE] El catálogo conserva el orden de registro
+
+PRUEBAS ADICIONALES
+   Cola vacía: No hay solicitudes pendientes.
+   [CUMPLE] Cola vacía no provoca error
+   Pila vacía: No hay préstamos para deshacer.
+   [CUMPLE] Pila vacía no provoca error
+   Código inexistente: No existe un libro con el código L99. Solicitud no registrada.
+   [CUMPLE] Se rechaza la solicitud de un código inexistente
+   Eliminar L03 (Marta lo solicitó): No se puede eliminar L03: tiene solicitudes pendientes.
+   [CUMPLE] No se elimina un libro con solicitudes pendientes
+
+RESULTADO: 15 verificaciones cumplidas, 0 fallidas.

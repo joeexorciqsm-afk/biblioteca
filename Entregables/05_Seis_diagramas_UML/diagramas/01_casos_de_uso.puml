@@ -1,0 +1,40 @@
+@startuml 01_casos_de_uso
+!pragma layout smetana
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam usecase {
+  BackgroundColor #EEF3FA
+  BorderColor #2F5597
+}
+skinparam actorBorderColor #2F5597
+left to right direction
+title Diagrama de casos de uso - Sistema de préstamos de la biblioteca
+
+actor "Bibliotecario" as B
+
+rectangle "Sistema de préstamos de la biblioteca" {
+  usecase "Registrar libro\n(RF01)" as UC1
+  usecase "Consultar catálogo\ny disponibilidad (RF02)" as UC2
+  usecase "Eliminar libro\n(RF03)" as UC3
+  usecase "Registrar solicitud\nde préstamo (RF04)" as UC4
+  usecase "Consultar solicitudes\npendientes (RF05)" as UC5
+  usecase "Atender siguiente\nsolicitud (RF06, RF07)" as UC6
+  usecase "Deshacer último\npréstamo (RF08)" as UC7
+  usecase "Consultar catálogo\nordenado por título (RF09)" as UC8
+}
+
+B --> UC1
+B --> UC2
+B --> UC3
+B --> UC4
+B --> UC5
+B --> UC6
+B --> UC7
+B --> UC8
+
+note right of B
+  Actor directo: el bibliotecario opera la consola.
+  El alumno es un interesado: comunica su solicitud
+  al bibliotecario, pero no usa el programa.
+end note
+@enduml

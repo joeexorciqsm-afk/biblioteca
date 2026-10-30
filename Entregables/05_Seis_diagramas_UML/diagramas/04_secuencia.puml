@@ -1,0 +1,46 @@
+@startuml 04_secuencia
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam sequenceMessageAlign center
+skinparam participant {
+  BackgroundColor #EEF3FA
+  BorderColor #2F5597
+}
+title Diagrama de secuencia - Atender siguiente solicitud\n(préstamo exitoso y alternativa sin disponibilidad)
+
+actor Bibliotecario
+participant "MenuConsola" as M
+participant "SistemaBiblioteca\n«servicioBiblioteca»" as S
+participant "ColaSolicitudes" as C
+participant "ListaLibros" as L
+participant "Libro" as LB
+participant "PilaPrestamos" as P
+
+Bibliotecario -> M : opción 6
+M -> S : atender_siguiente()
+S -> C : esta_vacia()
+C --> S : resultado
+
+alt cola vacía
+  S --> M : Resultado(False, "No hay solicitudes pendientes")
+else cola con solicitudes
+  S -> C : desencolar()
+  C --> S : solicitud
+  S -> L : buscar(solicitud.codigo_libro)
+  L --> S : libro
+  alt libro disponible
+    S -> LB : cambiar_disponibilidad(False)
+    S -> P : apilar(Prestamo(alumno, codigo))
+    S --> M : Resultado(True, "Préstamo realizado")
+  else libro prestado
+    S --> M : Resultado(False, "Sin disponibilidad")
+    note right of S : La solicitud ya se retiró de la cola\ny no se crea un préstamo.
+  end
+end
+M --> Bibliotecario : muestra el mensaje
+
+note over S, L
+  Se supone que el libro existe: la solicitud se validó al registrarla
+  y no se permite eliminar libros con solicitudes pendientes (RF03).
+end note
+@enduml

@@ -1,0 +1,29 @@
+@startuml 05_componentes
+!pragma layout smetana
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam component {
+  BackgroundColor #EEF3FA
+  BorderColor #2F5597
+}
+title Diagrama de componentes - Módulos del programa
+
+component "menu.py\n(Interacción con el usuario)" as menu
+component "sistema.py\n(Coordinación de reglas y operaciones)" as sistema
+component "catalogo.py\n(Lista enlazada y libros)" as catalogo
+component "solicitudes.py\n(Cola de solicitudes)" as solicitudes
+component "prestamos.py\n(Pila de préstamos)" as prestamos
+component "ordenamiento.py\n(Algoritmo burbuja)" as ordenamiento
+
+menu ..> sistema : <<use>>
+sistema ..> catalogo : <<use>>
+sistema ..> solicitudes : <<use>>
+sistema ..> prestamos : <<use>>
+sistema ..> ordenamiento : <<use>>
+ordenamiento ..> catalogo : <<use>>\n(tipo Libro)
+
+note bottom of solicitudes
+  Usa collections.deque
+  (biblioteca estándar de Python)
+end note
+@enduml

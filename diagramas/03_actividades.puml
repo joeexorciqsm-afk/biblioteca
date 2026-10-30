@@ -1,0 +1,31 @@
+@startuml 03_actividades
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam activity {
+  BackgroundColor #EEF3FA
+  BorderColor #2F5597
+  DiamondBackgroundColor #FFF2CC
+  DiamondBorderColor #BF9000
+}
+title Diagrama de actividades - Atender siguiente solicitud (atender_siguiente)
+
+start
+:El bibliotecario elige "Atender siguiente solicitud";
+:Consultar si la cola está vacía\n(solicitudes.esta_vacia());
+if (¿Cola de solicitudes?) then ([vacía])
+  :Mostrar "No hay solicitudes pendientes"\n(no se modifica ninguna estructura);
+  stop
+else ([no vacía])
+  :Retirar la primera solicitud\n(solicitudes.desencolar());
+  :Buscar el libro por código\n(catalogo.buscar(codigo));
+  :Comprobar disponibilidad del libro;
+  if (¿Libro disponible?) then ([disponible])
+    :Marcar el libro como prestado\n(libro.cambiar_disponibilidad(False));
+    :Crear Prestamo(alumno, codigo)\ny apilarlo (prestamos.apilar());
+    :Informar "Préstamo realizado";
+  else ([prestado])
+    :Informar que la solicitud no obtuvo el libro\n(la solicitud ya fue retirada; no se crea préstamo);
+  endif
+endif
+stop
+@enduml

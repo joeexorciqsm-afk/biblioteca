@@ -1,0 +1,123 @@
+@startuml 02_clases
+!pragma layout smetana
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam packageStyle folder
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #2F5597
+  BackgroundColor<<servicioBiblioteca>> #FFF2CC
+  BorderColor<<servicioBiblioteca>> #BF9000
+}
+title Diagrama de clases - Sistema de préstamos de la biblioteca
+
+package "Interfaz" {
+  class MenuConsola {
+    - sistema : SistemaBiblioteca
+    + leer_texto(mensaje : str) : str
+    + leer_opcion() : int
+    + mostrar_opciones() : void
+    + mostrar_resultado(r : Resultado) : void
+    + ejecutar() : void
+  }
+}
+
+class SistemaBiblioteca <<servicioBiblioteca>> {
+  - catalogo : ListaLibros
+  - solicitudes : ColaSolicitudes
+  - prestamos : PilaPrestamos
+  - siguiente_numero : int
+  + registrar_libro(codigo, titulo, autor) : Resultado
+  + obtener_catalogo() : List<Libro>
+  + buscar_libro(codigo) : Resultado
+  + eliminar_libro(codigo) : Resultado
+  + registrar_solicitud(alumno, codigo) : Resultado
+  + obtener_solicitudes_pendientes() : List<Solicitud>
+  + atender_siguiente() : Resultado
+  + deshacer_prestamo() : Resultado
+  + obtener_historial_prestamos() : List<Prestamo>
+  + ordenar_por_titulo() : List<Libro>
+}
+
+class Resultado {
+  + exito : bool
+  + mensaje : str
+  + dato : objeto
+}
+
+package "Catálogo" {
+  class Libro {
+    + codigo : str
+    + titulo : str
+    + autor : str
+    + disponible : bool
+    + cambiar_disponibilidad(disponible : bool) : void
+    + estado() : str
+  }
+  class NodoLibro {
+    + libro : Libro
+    + siguiente : NodoLibro
+  }
+  class ListaLibros {
+    - cabeza : NodoLibro
+    - tamano : int
+    + agregar(libro : Libro) : void
+    + buscar(codigo : str) : Libro
+    + eliminar(codigo : str) : bool
+    + recorrer() : Iterator<Libro>
+    + esta_vacia() : bool
+  }
+}
+
+package "Solicitudes" {
+  class Solicitud {
+    + numero : int
+    + alumno : str
+    + codigo_libro : str
+  }
+  class ColaSolicitudes {
+    - elementos : deque<Solicitud>
+    + encolar(s : Solicitud) : void
+    + frente() : Solicitud
+    + desencolar() : Solicitud
+    + esta_vacia() : bool
+    + contiene_libro(codigo : str) : bool
+  }
+}
+
+package "Préstamos" {
+  class Prestamo {
+    + alumno : str
+    + codigo_libro : str
+  }
+  class PilaPrestamos {
+    - elementos : list<Prestamo>
+    + apilar(p : Prestamo) : void
+    + cima() : Prestamo
+    + desapilar() : Prestamo
+    + esta_vacia() : bool
+  }
+}
+
+MenuConsola --> "1" SistemaBiblioteca : usa >
+MenuConsola ..> Resultado : muestra
+SistemaBiblioteca ..> Resultado : crea
+SistemaBiblioteca *-- "1" ListaLibros : catálogo
+SistemaBiblioteca *-- "1" ColaSolicitudes : solicitudes
+SistemaBiblioteca *-- "1" PilaPrestamos : préstamos
+ListaLibros o-- "0..*" NodoLibro : contiene >
+ListaLibros --> "0..1" NodoLibro : cabeza
+NodoLibro --> "1" Libro : guarda >
+NodoLibro --> "0..1" NodoLibro : siguiente
+ColaSolicitudes o-- "0..*" Solicitud : contiene >
+PilaPrestamos o-- "0..*" Prestamo : contiene >
+
+legend right
+  <b>Leyenda de extensiones</b>
+  «servicioBiblioteca»: estereotipo definido por el equipo.
+  Se aplica solo a clases que coordinan las reglas de negocio
+  y las operaciones entre catálogo, cola y pila, sin leer
+  del teclado ni imprimir. En este modelo: SistemaBiblioteca.
+endlegend
+@enduml

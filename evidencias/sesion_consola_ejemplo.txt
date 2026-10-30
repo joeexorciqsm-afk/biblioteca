@@ -1,0 +1,399 @@
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 1
+
+Código: L01
+Título: El principito
+Autor: Antoine de Saint-Exupéry
+[OK] Libro L01 «El principito» registrado.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 1
+
+Código: L02
+Título: Don Quijote de la Mancha
+Autor: Miguel de Cervantes
+[OK] Libro L02 «Don Quijote de la Mancha» registrado.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 1
+
+Código: L03
+Título: Alicia en el país de las maravillas
+Autor: Lewis Carroll
+[OK] Libro L03 «Alicia en el país de las maravillas» registrado.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 1
+
+Código: l01
+Título: Repetido
+Autor: X
+[!] Ya existe un libro con el código L01.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 1
+
+Código: L04
+Título:   
+Autor: Autor
+[!] Código, título y autor son obligatorios.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 4
+
+Nombre del alumno: Ana
+Código del libro: L01
+[OK] Solicitud #1 de Ana para L01 registrada.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 4
+
+Nombre del alumno: Luis
+Código del libro: L02
+[OK] Solicitud #2 de Luis para L02 registrada.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 4
+
+Nombre del alumno: Marta
+Código del libro: L03
+[OK] Solicitud #3 de Marta para L03 registrada.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 4
+
+Nombre del alumno: Pedro
+Código del libro: L99
+[!] No existe un libro con el código L99. Solicitud no registrada.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 5
+
+SOLICITUDES PENDIENTES (del frente al final)
+ 1. #1 Ana - L01  <- frente
+ 2. #2 Luis - L02
+ 3. #3 Marta - L03
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 6
+
+[OK] Préstamo realizado: «El principito» (L01) para Ana.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 6
+
+[OK] Préstamo realizado: «Don Quijote de la Mancha» (L02) para Luis.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 2
+
+Código a buscar (Enter para ver todo el catálogo): 
+CATÁLOGO (orden de registro)
+Código   Título                                 Autor                      Estado
+------------------------------------------------------------------------------------
+L01      El principito                          Antoine de Saint-Exupéry   Prestado
+L02      Don Quijote de la Mancha               Miguel de Cervantes        Prestado
+L03      Alicia en el país de las maravillas    Lewis Carroll              Disponible
+Total: 3 libro(s).
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 2
+
+Código a buscar (Enter para ver todo el catálogo): L02
+Código   Título                                 Autor                      Estado
+------------------------------------------------------------------------------------
+L02      Don Quijote de la Mancha               Miguel de Cervantes        Prestado
+Total: 1 libro(s).
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 7
+
+[OK] Préstamo deshecho: Luis - L02. El libro vuelve a estar disponible.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 3
+
+Código del libro a eliminar: L03
+[!] No se puede eliminar L03: tiene solicitudes pendientes.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 8
+
+CATÁLOGO ORDENADO POR TÍTULO (copia; el catálogo original no cambia)
+Código   Título                                 Autor                      Estado
+------------------------------------------------------------------------------------
+L03      Alicia en el país de las maravillas    Lewis Carroll              Disponible
+L02      Don Quijote de la Mancha               Miguel de Cervantes        Disponible
+L01      El principito                          Antoine de Saint-Exupéry   Prestado
+Total: 3 libro(s).
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 5
+
+SOLICITUDES PENDIENTES (del frente al final)
+ 1. #3 Marta - L03  <- frente
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): hola
+[!] Opción no válida. Escriba un número del 1 al 9.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 12
+[!] Opción no válida. Escriba un número del 1 al 9.
+
+==============================================
+   SISTEMA DE PRÉSTAMOS - BIBLIOTECA ESCOLAR
+==============================================
+ 1. Registrar libro
+ 2. Consultar catálogo
+ 3. Eliminar libro
+ 4. Registrar solicitud de préstamo
+ 5. Consultar solicitudes pendientes
+ 6. Atender siguiente solicitud
+ 7. Deshacer último préstamo
+ 8. Mostrar libros ordenados por título
+ 9. Salir
+----------------------------------------------
+Elija una opción (1-9): 9
+Hasta luego.

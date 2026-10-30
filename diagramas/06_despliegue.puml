@@ -1,0 +1,37 @@
+@startuml 06_despliegue
+!pragma layout smetana
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam node {
+  BackgroundColor #F7F9FC
+  BorderColor #2F5597
+}
+skinparam artifact {
+  BackgroundColor #FFFFFF
+  BorderColor #2F5597
+}
+title Diagrama de despliegue
+
+actor Bibliotecario
+
+node "Computadora de la biblioteca\n<<device>>" as pc {
+  node "Python 3.8 o superior\n<<executionEnvironment>>" as py {
+    artifact "menu.py" as a1
+    artifact "sistema.py" as a2
+    artifact "catalogo.py" as a3
+    artifact "solicitudes.py" as a4
+    artifact "prestamos.py" as a5
+    artifact "ordenamiento.py" as a6
+  }
+  component "Consola / terminal" as consola
+}
+
+Bibliotecario --> consola : teclado y pantalla
+consola --> a1 : python menu.py
+
+note bottom of pc
+  Los datos se mantienen en memoria mientras el programa se ejecuta.
+  No se usa servidor web. Si se agrega la ampliación de persistencia,
+  se añadiría el artefacto biblioteca.json en el disco de esta computadora.
+end note
+@enduml

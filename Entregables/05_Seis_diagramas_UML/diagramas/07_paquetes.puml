@@ -1,0 +1,40 @@
+@startuml 07_paquetes
+!pragma layout smetana
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam packageStyle folder
+skinparam package {
+  BackgroundColor #F7F9FC
+  BorderColor #2F5597
+}
+title Gestión del modelo - Organización en paquetes
+
+package "Interfaz" as PI {
+  class MenuConsola
+}
+package "Catálogo" as PC {
+  class Libro
+  class NodoLibro
+  class ListaLibros
+}
+package "Solicitudes" as PS {
+  class Solicitud
+  class ColaSolicitudes
+}
+package "Préstamos" as PP {
+  class Prestamo
+  class PilaPrestamos
+}
+class SistemaBiblioteca <<servicioBiblioteca>>
+
+PI ..> SistemaBiblioteca : <<use>>
+SistemaBiblioteca ..> PC : <<use>>
+SistemaBiblioteca ..> PS : <<use>>
+SistemaBiblioteca ..> PP : <<use>>
+
+legend right
+  SistemaBiblioteca no pertenece a un paquete de datos:
+  coordina los tres paquetes. Lleva el estereotipo
+  «servicioBiblioteca» (ver leyenda del diagrama de clases).
+endlegend
+@enduml

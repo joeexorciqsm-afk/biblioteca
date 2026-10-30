@@ -1,0 +1,33 @@
+test_P24_escenario_integrado (test_biblioteca.PruebaFinalIntegrada.test_P24_escenario_integrado) ... ok
+test_P06_burbuja_ordena_sin_alterar_original (test_biblioteca.PruebasBurbuja.test_P06_burbuja_ordena_sin_alterar_original) ... ok
+test_P07_burbuja_ignora_acentos_y_mayusculas (test_biblioteca.PruebasBurbuja.test_P07_burbuja_ignora_acentos_y_mayusculas) ... ok
+test_P08_burbuja_casos_limite (test_biblioteca.PruebasBurbuja.test_P08_burbuja_casos_limite) ... ok
+test_P09_no_usa_sort_ni_sorted (test_biblioteca.PruebasBurbuja.test_P09_no_usa_sort_ni_sorted) ... ok
+test_P04_cola_fifo_y_vacia (test_biblioteca.PruebasColaYPila.test_P04_cola_fifo_y_vacia) ... ok
+test_P05_pila_lifo_y_vacia (test_biblioteca.PruebasColaYPila.test_P05_pila_lifo_y_vacia) ... ok
+test_P01_lista_vacia (test_biblioteca.PruebasListaLibros.test_P01_lista_vacia) ... ok
+test_P02_agregar_conserva_orden_y_nodo_guarda_libro (test_biblioteca.PruebasListaLibros.test_P02_agregar_conserva_orden_y_nodo_guarda_libro) ... ok
+test_P03_eliminar_cabeza_medio_y_final (test_biblioteca.PruebasListaLibros.test_P03_eliminar_cabeza_medio_y_final) ... ok
+test_P25_menu_valida_opciones (test_biblioteca.PruebasMenu.test_P25_menu_valida_opciones) ... ok
+test_P26_menu_estructuras_vacias_sin_errores (test_biblioteca.PruebasMenu.test_P26_menu_estructuras_vacias_sin_errores) ... ok
+test_P27_menu_flujo_completo (test_biblioteca.PruebasMenu.test_P27_menu_flujo_completo) ... ok
+test_P28_menu_fin_de_entrada (test_biblioteca.PruebasMenu.test_P28_menu_fin_de_entrada) ... ok
+test_P10_RF01_rechaza_codigo_repetido (test_biblioteca.PruebasSistema.test_P10_RF01_rechaza_codigo_repetido) ... ok
+test_P11_RF01_rechaza_campos_vacios (test_biblioteca.PruebasSistema.test_P11_RF01_rechaza_campos_vacios) ... ok
+test_P12_RF02_catalogo_muestra_disponibilidad (test_biblioteca.PruebasSistema.test_P12_RF02_catalogo_muestra_disponibilidad) ... ok
+test_P13_RF02_buscar_codigo_inexistente (test_biblioteca.PruebasSistema.test_P13_RF02_buscar_codigo_inexistente) ... ok
+test_P14_RF03_eliminar_permitido (test_biblioteca.PruebasSistema.test_P14_RF03_eliminar_permitido) ... ok
+test_P15_RF03_no_elimina_con_solicitud_pendiente (test_biblioteca.PruebasSistema.test_P15_RF03_no_elimina_con_solicitud_pendiente) ... ok
+test_P16_RF03_no_elimina_prestado_ni_inexistente (test_biblioteca.PruebasSistema.test_P16_RF03_no_elimina_prestado_ni_inexistente) ... ok
+test_P17_RF04_solicitud_de_libro_inexistente (test_biblioteca.PruebasSistema.test_P17_RF04_solicitud_de_libro_inexistente) ... ok
+test_P18_RF04_solicitud_no_reserva (test_biblioteca.PruebasSistema.test_P18_RF04_solicitud_no_reserva) ... ok
+test_P19_RF06_cola_vacia_no_modifica_nada (test_biblioteca.PruebasSistema.test_P19_RF06_cola_vacia_no_modifica_nada) ... ok
+test_P20_RF06_libro_prestado_retira_solicitud_sin_prestamo (test_biblioteca.PruebasSistema.test_P20_RF06_libro_prestado_retira_solicitud_sin_prestamo) ... ok
+test_P21_RF08_pila_vacia (test_biblioteca.PruebasSistema.test_P21_RF08_pila_vacia) ... ok
+test_P22_RF08_deshacer_no_regresa_solicitud (test_biblioteca.PruebasSistema.test_P22_RF08_deshacer_no_regresa_solicitud) ... ok
+test_P23_RF09_ordenar_no_altera_catalogo_ni_cola (test_biblioteca.PruebasSistema.test_P23_RF09_ordenar_no_altera_catalogo_ni_cola) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.003s
+
+OK
